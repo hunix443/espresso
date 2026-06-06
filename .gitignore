@@ -1,0 +1,4 @@
+# Those are development folders/files.
+.venv
+TODO.md
+__pycache__

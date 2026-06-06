@@ -1,1 +1,5 @@
+# up to date packages with the most recent patches
 argon2-cffi==25.1.0
+cryptography==48.0.0
+typer==0.15.3
+rich==15.0.0

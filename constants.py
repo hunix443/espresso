@@ -1,3 +1,9 @@
+"""
+This file contains all constants needed for the project to be working
+the right way, using Final class to avoid any problem with subclassing or overriding
+variables type.
+"""
+
 from pathlib import Path
 from typing import Final
 
@@ -7,7 +13,6 @@ ARGON2_PARALLELISM: Final[int] = 4
 
 SALT_LENGTH_BYTES: Final[int] = 16
 NONCE_LENGTH_BYTES: Final[int] = 12
-
 
 VAULT_FORMAT_VERSION: Final[int] = 1
 
@@ -29,7 +34,7 @@ CIPHER_KEY_CIPHERTEXT: Final[str] = "ciphertext"
 KDF_NAME_ARGON2ID: Final[str] = "argon2id"
 CIPHER_NAME_AES_256_GCM: Final[str] = "aes-256-gcm"
 
-VAULT_FILE_MODE: Final[str] = 0o600
+VAULT_FILE_MODE: Final[int] = 0o600
 
 # We set the default location at ~/.espresso-vault/vault.json
 DEFAULT_VAULT_DIRECTORY: Final[Path] = Path.home() / ".espresso-vault"
@@ -37,6 +42,7 @@ DEFAULT_VAULT_FILENAME: Final[str] = "vault.json"
 DEFAULT_VAULT_PATH: Final[Path] = (
 	DEFAULT_VAULT_DIRECTORY / DEFAULT_VAULT_FILENAME
 )
+DEFAULT_GENERATED_PASSWORD_LENGTH: Final[int] = 8
 
 PROMPT_MASTER_PASSWORD: Final[str] = "Master password"
 PROMPT_MASTER_PASSWORD_NEW: Final[str] = "New master password"
