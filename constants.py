@@ -39,9 +39,7 @@ VAULT_FILE_MODE: Final[int] = 0o600
 # We set the default location at ~/.espresso-vault/vault.json
 DEFAULT_VAULT_DIRECTORY: Final[Path] = Path.home() / ".espresso-vault"
 DEFAULT_VAULT_FILENAME: Final[str] = "vault.json"
-DEFAULT_VAULT_PATH: Final[Path] = (
-	DEFAULT_VAULT_DIRECTORY / DEFAULT_VAULT_FILENAME
-)
+DEFAULT_VAULT_PATH: Final[Path] = DEFAULT_VAULT_DIRECTORY / DEFAULT_VAULT_FILENAME
 DEFAULT_GENERATED_PASSWORD_LENGTH: Final[int] = 8
 
 PROMPT_MASTER_PASSWORD: Final[str] = "Master password"
@@ -54,9 +52,7 @@ PROMPT_ENTRY_NOTES: Final[str] = "Notes (optional, press Enter to skip): "
 
 MSG_VAULT_CREATED: Final[str] = "Vault created at {path}"
 MSG_VAULT_ALREADY_EXISTS: Final[str] = "Vault already exists at {path}"
-MSG_VAULT_NOT_FOUND: Final[str] = (
-    "No vault at {path}. Run `pv init` to create one"
-)
+MSG_VAULT_NOT_FOUND: Final[str] = "No vault at {path}. Run `pv init` to create one"
 MSG_ENTRY_ADDED: Final[str] = "Added entry: {name}"
 MSG_ENTRY_DELETED: Final[str] = "Deleted entry: {name}"
 MSG_ENTRY_NOT_FOUND: Final[str] = "No entry named: {name}"
@@ -69,7 +65,7 @@ MSG_WRONG_MASTER_PASSWORD: Final[str] = (
 )
 MSG_VAULT_EMPTY: Final[str] = "Vault is empty. Add an entry with `pv add`"
 
-MSG_MASTER_PASSWORD_EMPTY: Final[str] = ("Master password cannot be empty")
+MSG_MASTER_PASSWORD_EMPTY: Final[str] = "Master password cannot be empty"
 MSG_MASTER_PASSWORD_TOO_SHORT: Final[str] = (
     "Master password must be at least {minimum} characters"
 )

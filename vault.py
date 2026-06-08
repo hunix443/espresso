@@ -4,9 +4,12 @@ import base64
 import getpass
 
 from pathlib import Path
-from typing import Final 
-from cryptography.hazmat.primitives.ciphers.aead import AESGCM # used for Encryption
-from argon2.low_level import hash_secret_raw, Type # Hashing ( we are not using sha256 or md5 because of GPU brute-force risks )
+from typing import Final
+from cryptography.hazmat.primitives.ciphers.aead import AESGCM  # used for Encryption
+from argon2.low_level import (
+    hash_secret_raw,
+    Type,
+)  # Hashing ( we are not using sha256 or md5 because of GPU brute-force risks )
 
 from constants import (
     SALT_LENGTH_BYTES,
@@ -32,7 +35,7 @@ from constants import (
     MSG_VAULT_CREATED,
     PROMPT_MASTER_PASSWORD,
     PROMPT_MASTER_PASSWORD_CONFIRM,
-    PROMPT_MASTER_PASSWORD_NEW
+    PROMPT_MASTER_PASSWORD_NEW,
 )
 
 
