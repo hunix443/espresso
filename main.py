@@ -1,4 +1,11 @@
-from vault import create_vault, vault_exists, add_entry, list_entries, get_entry, delete_entry
+from vault import (
+    create_vault,
+    vault_exists,
+    add_entry,
+    list_entries,
+    get_entry,
+    delete_entry,
+)
 
 
 def menu():
@@ -33,7 +40,6 @@ def menu():
 
 
 if __name__ == "__main__":
-
     if not vault_exists():
         create_vault()
     menu()
