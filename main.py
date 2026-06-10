@@ -15,6 +15,7 @@ def menu():
             print("Invalid choice")
             continue
 
+        # Probably needs refactoring
         if choice == 1:
             list_entries()
         elif choice == 2:
@@ -32,7 +33,7 @@ def menu():
 
 
 if __name__ == "__main__":
+
     if not vault_exists():
         create_vault()
-
     menu()

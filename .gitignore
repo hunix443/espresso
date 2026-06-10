@@ -2,3 +2,5 @@
 .venv
 TODO.md
 __pycache__
+# already has a .gitignore but I like to be explicit
+.ruff_cache

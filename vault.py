@@ -65,7 +65,7 @@ def load_and_decrypt() -> tuple[dict, dict, bytes]:
     vault_path = Path.home() / ".espresso-vault" / "vault.json"
     vault = json.loads(vault_path.read_text())
 
-    master_password = getpass.getpass("Master password")
+    master_password = getpass.getpass("\nMaster password : ")
     salt = base64.b64decode(vault["kdf"]["salt"])
     key = derive_key(master_password, salt)
 
@@ -130,8 +130,9 @@ def list_entries() -> None:
         print("Vault is empty. Add an entry with `pv add`")
         return
 
+    print("")
     for name in entries:
-        print(name)
+        print(f"[ENTRY] {name}")
 
 
 def get_entry() -> None:
