@@ -15,11 +15,9 @@ Simply run these commands
 
 ```sh
 # Not very elegant but it does the job
-git clone https://github.com/hunix443/espresso.git /tmp/espresso
+git clone https://github.com/hunix443/espresso.git ~/.local/share/espresso
 
-bash /tmp/espresso/install.sh
-
-rm -rf /tmp/espresso
+bash ~/.local/share/espresso/install.sh
 ```
 
 ## Guide

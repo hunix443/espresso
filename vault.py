@@ -28,7 +28,8 @@ def vault_exists() -> bool:
 
 
 def create_vault() -> Path:
-    master_password: str = getpass.getpass("Master password")
+    print("---Be Cautious---\n")
+    master_password: str = getpass.getpass("Master password : ")
     vault_path = Path.home() / ".espresso-vault" / "vault.json"
     if vault_exists():
         raise FileExistsError(f"Vault already exists at {vault_path}")
@@ -127,10 +128,10 @@ def list_entries() -> None:
     vault, entries, key = load_and_decrypt()
 
     if not entries:
-        print("Vault is empty. Add an entry with `pv add`")
+        print("[WARNING] Vault is empty")
         return
 
-    print("")
+    print("---Entries---\n")
     for name in entries:
         print(f"[ENTRY] {name}")
 
